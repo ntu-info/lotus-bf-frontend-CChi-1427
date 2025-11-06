@@ -1,5 +1,4 @@
-
-/* App.css baseline (hoverless look is enforced inline in App.jsx too) */
+/* App.css (已修正 min-width) */
 :root {
   --bg: #fafafa;
   --fg: #111827;
@@ -46,7 +45,7 @@ body {
 .hint { margin-top: 8px; color: var(--muted); font-size: 12px; }
 .hint__code { background:#f3f4f6; padding:2px 6px; border-radius:8px; }
 
-/* Downsized buttons (no hover/active change) */
+/* (全域按鈕樣式保持不變) */
 button, .btn, [role="button"], .button {
   background: var(--primary-600);
   color:#fff;
@@ -80,7 +79,7 @@ button:disabled, .btn:disabled { opacity:.55; cursor:not-allowed; }
 }
 
 
-/* QueryBuilder fallback styles (when Tailwind classes are not present) */
+/* QueryBuilder fallback styles */
 .qb__input {
   width: 100%;
   max-width: 100%;
@@ -96,9 +95,9 @@ button:disabled, .btn:disabled { opacity:.55; cursor:not-allowed; }
 }
 
 
-/* Ensure QueryBuilder input doesn't collapse too narrow */
+/* --- 【滾動軸修正】--- */
+/* 移除了 'min-width' 規則，
+   Query Builder 輸入欄現在可以自由縮小
+*/
 .qb { width: 100%; }
-.qb__input { width: 100%; min-width: 420px; }
-@media (min-width: 1024px) {
-  .qb__input { min-width: 640px; }
-}
+.qb__input { width: 100%; }
