@@ -1,0 +1,101 @@
+/* components/Terms.css */
+
+.terms-container {
+  padding-right: 10px; /* 避免滾動條遮擋內容 */
+}
+
+/* 區塊標題 (History, Terms) */
+.terms__section {
+  margin-top: 16px;
+}
+.terms__section-title {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--muted);
+  margin: 0 0 10px 0;
+  padding: 0 4px;
+  display: flex;
+  align-items: center;
+}
+
+/* --- 【圖標大小修正】--- */
+/* 將圖標的大小增加到 1.25em (比文字大 25%) */
+.terms__section-title svg {
+  width: 1.5em; 
+  height: 1.5em; 
+  margin-right: 6px; 
+}
+
+
+/* (A-Z 過濾器樣式保持不變) */
+.letter-toolbar {
+  display: flex;
+  flex-wrap: wrap; 
+  gap: 8px; 
+  margin-bottom: 18px;
+  padding: 0 4px;
+}
+
+.app__sidebar .letter-chip {
+  background: none !important;
+  border: 1px solid var(--border) !important;
+  color: var(--fg) !important;
+  font-size: 12px !important;
+  font-weight: 600 !important;
+  padding: 4px 8px !important;
+  border-radius: 8px !important;
+  cursor: pointer;
+  min-width: 32px;
+  text-align: center;
+  transition: all 0.15s ease;
+  line-height: 1.2 !important;
+}
+.app__sidebar .letter-chip:hover {
+  border-color: #9ca3af !important;
+  background: #f3f4f6 !important;
+  color: var(--fg) !important;
+}
+.app__sidebar .letter-chip.is-active {
+  background: var(--primary-600) !important;
+  color: #fff !important;
+  border-color: var(--primary-600) !important;
+}
+
+
+/* (列表和按鈕間距 6px 保持不變) */
+.term-list {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 6px; 
+}
+
+/* (term-button 樣式保持不變) */
+.app__sidebar .term-button {
+  background: transparent !important;
+  color: var(--fg) !important;
+  border: none !important;
+  padding: 3px 6px !important;
+  font-size: 14px !important;
+  font-weight: 500 !important;
+  display: flex !important;
+  justify-content: flex-start !important;
+  cursor: pointer;
+  border-radius: 6px !important;
+  width: 100%;
+}
+
+.app__sidebar .term-button:hover, 
+.app__sidebar .term-button:active {
+  background: #f3f4f6 !important;
+  color: var(--primary-600) !important;
+}
+
+/* (History 提示樣式保持不變) */
+.terms__empty-history {
+  font-size: 13px;
+  color: var(--muted);
+  padding: 4px 6px;
+  font-style: italic;
+  display: block; 
+}
